@@ -8,6 +8,7 @@ import PropertiesPage from "./pages/PropertiesPage";
 import PropertyDetailsPage from "./pages/PropertyDetailsPage";
 import AuthPage from "./pages/AuthPage";
 import { AboutPage, ContactPage } from "./pages/InfoPages";
+import CityLandingPage from "./pages/CityLandingPage";
 import { UserDashboard, ProfilePage, EnquiriesPage, BookingsPage, PaymentsPage } from "./pages/UserPages";
 import { SavedPropertiesPage, NotificationsPage, InterestedBuyersPage } from "./pages/EngagementPages";
 import { AgentDashboard, AgentProperties, PropertyForm } from "./pages/AgentPages";
@@ -24,6 +25,7 @@ export default function App() {
   return <Suspense fallback={<Loading />}><Routes>
     <Route element={<PublicLayout />}>
       <Route path="/" element={<HomePage />} /><Route path="/properties" element={<PropertiesPage />} /><Route path="/properties/:id" element={<PropertyDetailsPage />} />
+      <Route path="/property-in-hyderabad" element={<CityLandingPage />} />
       <Route path="/about" element={<AboutPage />} /><Route path="/contact" element={<ContactPage />} /><Route path="/login" element={<AuthPage />} /><Route path="/register" element={<AuthPage register />} />
     </Route>
     <Route element={<ProtectedRoute roles={["USER"]} />}><Route element={<DashboardLayout />}>

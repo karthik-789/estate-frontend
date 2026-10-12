@@ -9,6 +9,7 @@ export default function PublicLayout() {
       <Link className="brand" to="/"><span>H</span>Havenly</Link>
       <nav>
         <NavLink to="/">Home</NavLink><NavLink to="/properties">Properties</NavLink>
+        <NavLink to="/property-in-hyderabad">Hyderabad</NavLink>
         <NavLink to="/about">About</NavLink><NavLink to="/contact">Contact</NavLink>
       </nav>
       <div className="topbar-actions">
